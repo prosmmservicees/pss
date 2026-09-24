@@ -363,7 +363,7 @@ function verifyTarget(){
     <p class="muted">Order <b>${orderId}</b> is ready for payment.</p>
     <button class="primary full" onclick="payment()">Continue to Payment →</button>`);
 }
-function payment(){let amount=Number(selected.offer[1].replace("₹",""));let upi="bestsmm123@naviaxis";let uri=`upi://pay?pa=${encodeURIComponent(upi)}&pn=Pro%20SMM%20Services&am=${amount}&cu=INR&tn=${orderId}`;let qr=`https://api.qrserver.com/v1/create-qr-code/?size=420x420&data=${encodeURIComponent(uri)}`;openModal(`<div class="eyebrow">SECURE PAYMENT</div><h3>Pay for your order</h3><div class="amount">₹${amount}</div><div class="order">Order ID: ${orderId}</div><img class="qr" src="${qr}"><p class="muted center"></p><label class="label">UTR / TRANSACTION REFERENCE</label><input id="utr" class="input" placeholder="Enter UTR / reference number"><button class="primary full" onclick="verifyUTR()">Submit UTR →</button>`)}
+function payment(){let amount=Number(selected.offer[1].replace("₹",""));let upi="bestsmm1234@ybl";let uri=`upi://pay?pa=${encodeURIComponent(upi)}&pn=Pro%20SMM%20Services&am=${amount}&cu=INR&tn=${orderId}`;let qr=`https://api.qrserver.com/v1/create-qr-code/?size=420x420&data=${encodeURIComponent(uri)}`;openModal(`<div class="eyebrow">SECURE PAYMENT</div><h3>Pay for your order</h3><div class="amount">₹${amount}</div><div class="order">Order ID: ${orderId}</div><img class="qr" src="${qr}"><p class="muted center"></p><label class="label">UTR / TRANSACTION REFERENCE</label><input id="utr" class="input" placeholder="Enter UTR / reference number"><button class="primary full" onclick="verifyUTR()">Submit UTR →</button>`)}
 async function verifyUTR(){
   const input=document.getElementById("utr");
   const u=input ? input.value.trim() : "";
